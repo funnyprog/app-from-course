@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {ThemeEnum} from "../shared/enums";
+import {ThemeEnum} from "shared/enums";
 
 export interface ThemeContextProps {
     theme?: ThemeEnum

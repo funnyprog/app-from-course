@@ -1,6 +1,6 @@
 import {ThemeContext} from "./ThemeContext";
 import {useCallback, useContext} from "react";
-import {LocalStorageKeysEnum, ThemeEnum} from "../shared/enums";
+import {LocalStorageKeysEnum, ThemeEnum} from "shared/enums";
 
 
 export interface UseThemeResult {
