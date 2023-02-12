@@ -2,17 +2,17 @@
   width: 100%;
   height: var(--navbar-height);
   display: flex;
-  justify-content: end;
   align-items: center;
   background-color: var(--inversed-bg-color);
+  padding: 0 15px;
+}
+
+.navbarLinks {
+  margin-left: auto;
 }
 
 .navbarBtn {
   & ~ & {
     margin-left: 15px;
-  }
-
-  &:last-child {
-    margin-right: 20px;
   }
 }

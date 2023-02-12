@@ -1,6 +1,6 @@
 import cls from './Navbar.module.scss';
 import {classNames} from "shared/lib";
-import {AppLink} from "shared/ui";
+import {AppLink, ThemeSwitcher} from "shared/ui";
 import {AppLinkThemesEnum, RoutePathsEnum} from "shared/enums";
 
 
@@ -14,20 +14,23 @@ export const Navbar = (props: NavbarProps) => {
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <AppLink
-                to={RoutePathsEnum.MAIN}
-                className={cls.navbarBtn}
-                theme={AppLinkThemesEnum.PRIMARY}
-            >
-                Главная
-            </AppLink>
-            <AppLink
-                to={RoutePathsEnum.ABOUT}
-                className={cls.navbarBtn}
-                theme={AppLinkThemesEnum.DANGER}
-            >
-                О проекте
-            </AppLink>
+            <ThemeSwitcher />
+            <div className={cls.navbarLinks}>
+                <AppLink
+                    to={RoutePathsEnum.MAIN}
+                    className={cls.navbarBtn}
+                    theme={AppLinkThemesEnum.PRIMARY}
+                >
+                    Главная
+                </AppLink>
+                <AppLink
+                    to={RoutePathsEnum.ABOUT}
+                    className={cls.navbarBtn}
+                    theme={AppLinkThemesEnum.DANGER}
+                >
+                    О проекте
+                </AppLink>
+            </div>
         </div>
     );
 };
