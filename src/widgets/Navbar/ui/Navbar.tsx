@@ -1,3 +1,4 @@
+import {useTranslation} from "react-i18next";
 import cls from './Navbar.module.scss';
 import {classNames} from "shared/lib";
 import {AppLink} from "shared/ui";
@@ -10,6 +11,7 @@ interface NavbarProps {
 
 export const Navbar = (props: NavbarProps) => {
     const {className} = props
+    const {t} = useTranslation()
 
 
     return (
@@ -20,14 +22,14 @@ export const Navbar = (props: NavbarProps) => {
                     className={cls.navbarBtn}
                     theme={AppLinkThemesEnum.PRIMARY}
                 >
-                    Главная
+                    {t('Главная')}
                 </AppLink>
                 <AppLink
                     to={RoutePathsEnum.ABOUT}
                     className={cls.navbarBtn}
                     theme={AppLinkThemesEnum.DANGER}
                 >
-                    О проекте
+                    {t('О проекте')}
                 </AppLink>
             </div>
         </div>

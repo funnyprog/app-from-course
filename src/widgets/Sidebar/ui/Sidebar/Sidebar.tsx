@@ -1,7 +1,7 @@
 import cls from './Sidebar.module.scss'
 import {classNames} from "shared/lib";
 import {useState} from "react";
-import {Button, ThemeSwitcher} from "shared/ui";
+import {Button, LangSwitcher, ThemeSwitcher} from "shared/ui";
 import {LocalStorageKeysEnum} from "shared/enums";
 
 const defaultCollapsed = JSON.parse(localStorage.getItem(LocalStorageKeysEnum.IS_SIDEBAR_COLLAPSED)) || false
@@ -29,6 +29,7 @@ export const Sidebar = (props: SidebarProps) => {
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
+                <LangSwitcher />
             </div>
         </div>
     );

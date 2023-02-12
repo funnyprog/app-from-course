@@ -20,4 +20,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  button ~ button {
+    margin-left: 15px;
+  }
 }
