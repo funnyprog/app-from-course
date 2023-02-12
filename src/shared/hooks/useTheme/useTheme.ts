@@ -1,5 +1,5 @@
-import {ThemeContext} from "./ThemeContext";
 import {useCallback, useContext} from "react";
+import {ThemeContext} from "shared/contexts";
 import {LocalStorageKeysEnum, ThemeEnum} from "shared/enums";
 
 

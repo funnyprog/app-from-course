@@ -1,7 +1,7 @@
 import './styles/index.scss'
-import {useTheme} from "app/providers";
 import {AppRoutesProvider} from "app/providers";
 import {Navbar} from "widgets/Navbar";
+import {useTheme} from "shared/hooks";
 import {classNames} from "shared/lib";
 
 const App = () => {

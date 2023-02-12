@@ -1,5 +1,5 @@
 import {FC, useMemo, useState} from 'react';
-import {ThemeContext, ThemeContextProps} from '../lib/ThemeContext';
+import {ThemeContext, ThemeContextProps} from 'shared/contexts';
 import {LocalStorageKeysEnum, ThemeEnum} from "shared/enums";
 
 
