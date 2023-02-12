@@ -1,15 +1,3 @@
-//$font-family-main: Consolas, 'Times New Roman', Serif;
-//
-//$font-size-M: 16px;
-//$font-line-M: 24;
-//$font-M: $font-size-M / $font-line-M $font-family-main;
-//
-//$font-size-L: 24px;
-//$font-line-L: 32px;
-//$font-L: var($font-size-L) / var($font-line-L) var($font-family-main);
-//
-//
-
 :root {
   --font-family-main: Roboto Regular, "Arial", sans-serif;
 
@@ -20,4 +8,6 @@
   --font-size-L: 24px;
   --font-line-L: 24px;
   --font-L: var(--font-size-L) / var(--font-line-L) var(--font-family-main);
+
+  --navbar-height: 75px;
 }
