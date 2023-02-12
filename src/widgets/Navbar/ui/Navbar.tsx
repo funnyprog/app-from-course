@@ -1,6 +1,6 @@
 import cls from './Navbar.module.scss';
 import {classNames} from "shared/lib";
-import {AppLink, ThemeSwitcher} from "shared/ui";
+import {AppLink} from "shared/ui";
 import {AppLinkThemesEnum, RoutePathsEnum} from "shared/enums";
 
 
@@ -14,7 +14,6 @@ export const Navbar = (props: NavbarProps) => {
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <ThemeSwitcher />
             <div className={cls.navbarLinks}>
                 <AppLink
                     to={RoutePathsEnum.MAIN}

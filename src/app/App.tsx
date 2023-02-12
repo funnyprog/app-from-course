@@ -1,6 +1,7 @@
 import './styles/index.scss'
 import {AppRoutesProvider} from "app/providers";
 import {Navbar} from "widgets/Navbar";
+import {Sidebar} from "widgets/Sidebar";
 import {useTheme} from "shared/hooks";
 import {classNames} from "shared/lib";
 
@@ -11,7 +12,10 @@ const App = () => {
         <div className={classNames('app', {}, [theme])}>
             <Navbar/>
 
-            <AppRoutesProvider />
+            <div className="page-content">
+                <Sidebar />
+                <AppRoutesProvider />
+            </div>
         </div>
     );
 };
