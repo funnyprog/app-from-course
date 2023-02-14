@@ -1,9 +1,9 @@
-import {createContext} from "react";
-import {ThemeEnum} from "shared/enums";
+import { createContext } from 'react';
+import { ThemeEnum } from 'shared/enums';
 
 export interface ThemeContextProps {
     theme?: ThemeEnum
     toggleTheme?: (newTheme: ThemeEnum) => void
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({})
+export const ThemeContext = createContext<ThemeContextProps>({});
