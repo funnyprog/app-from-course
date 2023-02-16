@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
 import { Button } from 'shared/ui';
 import { ButtonThemesEnum } from 'shared/enums';
-import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
     className?: string
@@ -19,7 +18,7 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
     return (
         <Button
             theme={ButtonThemesEnum.CLEAR}
-            className={classNames(cls.langSwitcher, {}, [className])}
+            className={classNames('', {}, [className])}
             onClick={handleChangeLang}
         >
             {t('Язык')}

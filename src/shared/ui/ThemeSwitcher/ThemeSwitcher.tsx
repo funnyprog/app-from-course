@@ -4,7 +4,6 @@ import { ButtonThemesEnum, ThemeEnum } from 'shared/enums';
 import { Button } from 'shared/ui';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
-import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
     className?: string
@@ -17,7 +16,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
     return (
         <Button
             theme={ButtonThemesEnum.CLEAR}
-            className={classNames(cls.themeSwitcher, {}, [className])}
+            className={classNames('', {}, [className])}
             onClick={handleToggleTheme}
         >
             {theme === ThemeEnum.DARK ? <DarkIcon /> : <LightIcon />}
