@@ -21,7 +21,7 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={handleChangeLang}
         >
-            {t('Язык')}
+            {t('widgets.sidebar.langSwitcher.lang')}
         </Button>
     );
 };

@@ -5,8 +5,7 @@ const AboutPage = () => {
 
     return (
         <div>
-            ntcnasd
-            {t('Тут рассказ о нашем сайте')}
+            {t('AboutPage.text')}
         </div>
     );
 };

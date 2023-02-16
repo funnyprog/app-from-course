@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, LangSwitcher, ThemeSwitcher } from 'shared/ui';
 import { LocalStorageKeysEnum } from 'shared/enums';
 import cls from './Sidebar.module.scss';
@@ -14,10 +15,14 @@ interface SidebarProps {
 export const Sidebar = (props: SidebarProps) => {
     const { className } = props;
     const [collapsed, setCollapsed] = useState(defaultCollapsed);
+    const { t } = useTranslation();
 
     const handleCollapsed = () => {
         setCollapsed(!collapsed);
-        localStorage.setItem(LocalStorageKeysEnum.IS_SIDEBAR_COLLAPSED, JSON.stringify(!collapsed));
+        localStorage.setItem(
+            LocalStorageKeysEnum.IS_SIDEBAR_COLLAPSED,
+            JSON.stringify(!collapsed),
+        );
     };
 
     return (
@@ -25,7 +30,7 @@ export const Sidebar = (props: SidebarProps) => {
             <Button
                 onClick={handleCollapsed}
             >
-                Toggle
+                {t('widgets.sidebar.collapsedButton')}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />

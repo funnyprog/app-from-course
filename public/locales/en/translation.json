@@ -1,17 +1,22 @@
 {
-  "dog": {
-    "cat": {
-      "cow": {
-        "flower": {
-          "text": "text"
-        }
-      }
+  "pages": {
+    "routes": {
+      "main": "Main",
+      "about": "About us",
+      "notFound": ""
+    },
+    "MainPage": {
+
+    },
+    "NotFoundPage": {
+      "text": "Page not found"
     }
   },
-  "Главная": "Main",
-  "О проекте": "About us",
-  "Перевод": "Translate",
-  "Тут рассказ о нашем сайте": "Тут рассказ о нашем сайте",
-  "Это главная страница": "This is main page",
-  "Язык": "English"
+  "widgets": {
+    "sidebar": {
+      "langSwitcher": {
+        "lang": "English"
+      }
+    }
+  }
 }
