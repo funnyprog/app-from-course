@@ -8,6 +8,12 @@
     "MainPage": {
 
     },
+    "ErrorPage": {
+      "text": "Some error. Try to reload page",
+      "button": {
+        "text": "Reload page"
+      }
+    },
     "NotFoundPage": {
       "text": "Page not found"
     }
