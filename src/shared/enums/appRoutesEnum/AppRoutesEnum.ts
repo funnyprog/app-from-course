@@ -1,4 +1,5 @@
 export const enum AppRoutesEnum {
     MAIN = 'main',
-    ABOUT = 'about'
+    ABOUT = 'about',
+    NOT_FOUND = 'not_found'
 }

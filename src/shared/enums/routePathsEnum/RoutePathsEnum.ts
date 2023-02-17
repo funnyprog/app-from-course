@@ -1,4 +1,5 @@
 export const enum RoutePathsEnum {
     MAIN = '/',
-    ABOUT = '/about'
+    ABOUT = '/about',
+    NOT_FOUND = '*'
 }
