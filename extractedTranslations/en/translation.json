@@ -1,6 +1,7 @@
 {
   "widgets": {
     "sidebar": {
+      "collapsedButton": "",
       "langSwitcher": {
         "lang": ""
       }
