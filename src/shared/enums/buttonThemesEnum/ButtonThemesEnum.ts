@@ -1,3 +1,4 @@
 export const enum ButtonThemesEnum {
-    CLEAR = 'clear'
+    CLEAR = 'clear',
+    OUTLINE = 'outline'
 }

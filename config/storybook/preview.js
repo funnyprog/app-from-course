@@ -1,3 +1,7 @@
+import { addDecorator } from '@storybook/react';
+import { StyleDecorator, RouterDecorator } from 'shared/config/storybook';
+import { ThemeEnum } from 'shared/enums';
+
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
@@ -7,3 +11,6 @@ export const parameters = {
         },
     },
 };
+
+addDecorator(StyleDecorator(ThemeEnum.LIGHT));
+addDecorator(RouterDecorator);

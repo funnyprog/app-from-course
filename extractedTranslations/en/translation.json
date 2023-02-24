@@ -1,4 +1,15 @@
 {
+  "pages": {
+    "ErrorPage": {
+      "button": {
+        "text": ""
+      },
+      "text": ""
+    },
+    "NotFoundPage": {
+      "text": ""
+    }
+  },
   "widgets": {
     "sidebar": {
       "collapsedButton": "",
@@ -6,5 +17,8 @@
         "lang": ""
       }
     }
-  }
+  },
+  "Главная": "",
+  "О проекте": "",
+  "Это главная страница": ""
 }

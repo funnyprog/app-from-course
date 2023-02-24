@@ -1,17 +1,17 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Sidebar } from 'widgets/Sidebar';
 import { StyleDecorator } from 'shared/config/storybook';
 import { ThemeEnum } from 'shared/enums';
+import AboutPage from './AboutPage';
 
 export default {
-    title: 'widgets/Sidebar',
-    component: Sidebar,
+    title: 'pages/AboutPage',
+    component: AboutPage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Sidebar>;
+} as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
+const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

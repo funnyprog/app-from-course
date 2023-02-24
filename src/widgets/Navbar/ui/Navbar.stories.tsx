@@ -1,17 +1,17 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Sidebar } from 'widgets/Sidebar';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StyleDecorator } from 'shared/config/storybook';
 import { ThemeEnum } from 'shared/enums';
+import { Navbar } from './Navbar';
 
 export default {
-    title: 'widgets/Sidebar',
-    component: Sidebar,
+    title: 'widgets/Navbar',
+    component: Navbar,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Sidebar>;
+} as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
+const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

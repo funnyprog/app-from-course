@@ -1,5 +1,6 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ButtonThemesEnum } from 'shared/enums';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ButtonThemesEnum, ThemeEnum } from 'shared/enums';
+import { StyleDecorator } from 'shared/config/storybook';
 import { Button } from './Button';
 
 export default {
@@ -22,3 +23,16 @@ Clear.args = {
     children: 'Button',
     theme: ButtonThemesEnum.CLEAR,
 };
+
+export const Outline = Template.bind({});
+Outline.args = {
+    children: 'Button',
+    theme: ButtonThemesEnum.OUTLINE,
+};
+
+export const OutlineDark = Template.bind({});
+OutlineDark.args = {
+    children: 'Button',
+    theme: ButtonThemesEnum.OUTLINE,
+};
+OutlineDark.decorators = [StyleDecorator(ThemeEnum.DARK)];
