@@ -11,9 +11,9 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
-    "test": "jest --config ./config/jest/jest.config.ts",
+    "test:ui": "jest -c ./config/jest/jest.config.ts",
     "storybook": "start-storybook -p 6006 -c ./config/storybook -s ./public",
-    "build-storybook": "build-storybook -c ./config/storybook -s ./public"
+    "storybook:build": "build-storybook -c ./config/storybook -s ./public"
   },
   "repository": {
     "type": "git",

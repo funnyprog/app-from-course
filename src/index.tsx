@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import './i18n';
+import './shared/config/i18n';
 import { BrowserRouter } from 'react-router-dom';
 import App from 'app/App';
 import { ThemeProvider, ErrorBoundary } from 'app/providers';
