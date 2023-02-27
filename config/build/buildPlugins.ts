@@ -7,7 +7,7 @@ import { BuildWebpackOptions } from './types/config';
 export function buildPlugins(options: BuildWebpackOptions): webpack.WebpackPluginInstance[] {
     const { paths, isDev } = options;
 
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -19,9 +19,18 @@ export function buildPlugins(options: BuildWebpackOptions): webpack.WebpackPlugi
         new webpack.DefinePlugin({
             __IS_DEV__: isDev,
         }),
+    ];
+
+    const isDevPlugins = [
         new webpack.HotModuleReplacementPlugin(),
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }),
     ];
+
+    if (isDev) {
+        return plugins.concat(isDevPlugins);
+    }
+
+    return plugins;
 }
