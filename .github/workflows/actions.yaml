@@ -24,7 +24,7 @@ jobs:
       - name: install modules
         run: npm install
 
-      - name: prod build of project
+      - name: build prod
         run: npm run build:prod
 
       - name: lint typescript
@@ -35,3 +35,9 @@ jobs:
 
       - name: test unit
         run: npm run test:unit
+
+      - name: build storybook
+        run: npm run storybook:build
+
+      - name: test ui ci
+        run: npm run test:ui:ci
