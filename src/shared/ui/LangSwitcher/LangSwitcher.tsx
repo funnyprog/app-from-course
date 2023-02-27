@@ -22,8 +22,7 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={handleChangeLang}
         >
-            {t(short
-                ? 'widgets.sidebar.langSwitcher.shortLang'
+            {t(short ? 'widgets.sidebar.langSwitcher.shortLang'
                 : 'widgets.sidebar.langSwitcher.lang')}
         </Button>
     );

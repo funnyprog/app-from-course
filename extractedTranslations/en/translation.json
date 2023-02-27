@@ -1,32 +1,29 @@
 {
-  "AboutPage": {
-    "text": "text"
-  },
   "pages": {
+    "routes": {
+      "main": "Main",
+      "about": "About us",
+      "notFound": ""
+    },
+    "MainPage": {
+
+    },
     "ErrorPage": {
+      "text": "Some error. Try to reload page",
       "button": {
-        "text": "text"
-      },
-      "text": "text"
+        "text": "Reload page"
+      }
     },
     "NotFoundPage": {
-      "text": "text"
-    },
-    "routes": {
-      "about": "",
-      "main": ""
+      "text": "Page not found"
     }
   },
   "widgets": {
     "sidebar": {
-      "collapsedButton": "",
       "langSwitcher": {
-        "lang": "lang"
+        "lang": "English",
+        "shortLang": "EN"
       }
     }
-  },
-  "Главная": "Главная",
-  "О проекте": "О проекте",
-  "Это главная страница": "Это главная страница",
-  "Язык": "Язык"
+  }
 }
