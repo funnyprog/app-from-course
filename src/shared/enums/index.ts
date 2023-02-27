@@ -3,4 +3,5 @@ export * from './ThemeEnum/ThemeEnum';
 export * from './AppRoutesEnum/AppRoutesEnum';
 export * from './RoutePathsEnum/RoutePathsEnum';
 export * from './AppLinkThemesEnum/AppLinkThemesEnum';
-export * from './ButtonThemesEnum/ButtonThemesEnum';
+export * from './ButtonEnums/ButtonThemesEnum';
+export * from './ButtonEnums/ButtonSizeEnum';

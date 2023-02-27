@@ -1,8 +1,14 @@
 import { classNames } from 'shared/lib';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, LangSwitcher, ThemeSwitcher } from 'shared/ui';
-import { LocalStorageKeysEnum } from 'shared/enums';
+import {
+    AppLink, Button, LangSwitcher, ThemeSwitcher,
+} from 'shared/ui';
+import {
+    AppLinkThemesEnum, ButtonSizeEnum, ButtonThemesEnum, LocalStorageKeysEnum, RoutePathsEnum,
+} from 'shared/enums';
+import HouseIcon from 'shared/assets/icons/House.svg';
+import InfoIcon from 'shared/assets/icons/Info.svg';
 import cls from './Sidebar.module.scss';
 
 const isSidebarCollapsed = localStorage.getItem(LocalStorageKeysEnum.IS_SIDEBAR_COLLAPSED);
@@ -31,14 +37,40 @@ export const Sidebar = (props: SidebarProps) => {
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
             <Button
-                data-testid="sidebar-toggle"
+                data-testid="collapse_switcher"
+                className={cls.collapseSwitcher}
+                theme={ButtonThemesEnum.BACKGROUND_INVERTED}
                 onClick={handleCollapsed}
+                square
+                size={ButtonSizeEnum.L}
             >
-                {t('widgets.sidebar.collapsedButton')}
+                {collapsed ? '>' : '<'}
             </Button>
+            <div className={cls.links}>
+                <AppLink
+                    to={RoutePathsEnum.MAIN}
+                    className={cls.link}
+                    theme={AppLinkThemesEnum.PRIMARY}
+                >
+                    <HouseIcon className={cls.icon} />
+                    <span className={cls.linkText}>
+                        {t('pages.routes.main')}
+                    </span>
+                </AppLink>
+                <AppLink
+                    to={RoutePathsEnum.ABOUT}
+                    className={cls.link}
+                    theme={AppLinkThemesEnum.PRIMARY}
+                >
+                    <InfoIcon className={cls.icon} />
+                    <span className={cls.linkText}>
+                        {t('pages.routes.about')}
+                    </span>
+                </AppLink>
+            </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher />
+                <LangSwitcher short={collapsed} />
             </div>
         </div>
     );

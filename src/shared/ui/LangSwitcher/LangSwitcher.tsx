@@ -5,10 +5,11 @@ import { ButtonThemesEnum } from 'shared/enums';
 
 interface LangSwitcherProps {
     className?: string
+    short: boolean
 }
 
 export const LangSwitcher = (props: LangSwitcherProps) => {
-    const { className } = props;
+    const { className, short } = props;
     const { t, i18n } = useTranslation();
 
     const handleChangeLang = () => {
@@ -21,7 +22,9 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={handleChangeLang}
         >
-            {t('widgets.sidebar.langSwitcher.lang')}
+            {t(short
+                ? 'widgets.sidebar.langSwitcher.shortLang'
+                : 'widgets.sidebar.langSwitcher.lang')}
         </Button>
     );
 };

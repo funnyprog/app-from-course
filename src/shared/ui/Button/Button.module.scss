@@ -1,7 +1,33 @@
+// Button main class
+
 .button {
     cursor: pointer;
     color: var(--primary);
+    padding: 8px 15px;
 }
+
+// Button props
+
+.square {
+    padding: 0;
+
+    &.sizeM {
+        width: var(--font-line-M);
+        height: var(--font-line-M);
+    }
+
+    &.sizeL {
+        width: var(--font-line-L);
+        height: var(--font-line-L);
+    }
+
+    &.sizeXL {
+        width: var(--font-line-XL);
+        height: var(--font-line-XL);
+    }
+}
+
+// Button themes
 
 .clear {
     padding: 0;
@@ -14,5 +40,30 @@
 .outline {
     background: none;
     border: 1px solid var(--primary);
-    padding: 10px 15px;
+}
+
+.background {
+    background: var(--bg-color);
+    color: var(--primary);
+    border: 0;
+}
+
+.backgroundInverted {
+    background: var(--inverted-bg-color);
+    color: var(--success);
+    border: 0;
+}
+
+// Button sizes
+
+.sizeM {
+    font-size: var(--font-size-M);
+}
+
+.sizeL {
+    font-size: var(--font-size-L);
+}
+
+.sizeXL {
+    font-size: var(--font-size-XL);
 }

@@ -1,24 +1,32 @@
 {
+  "AboutPage": {
+    "text": "text"
+  },
   "pages": {
     "ErrorPage": {
       "button": {
-        "text": ""
+        "text": "text"
       },
-      "text": ""
+      "text": "text"
     },
     "NotFoundPage": {
-      "text": ""
+      "text": "text"
+    },
+    "routes": {
+      "about": "",
+      "main": ""
     }
   },
   "widgets": {
     "sidebar": {
       "collapsedButton": "",
       "langSwitcher": {
-        "lang": ""
+        "lang": "lang"
       }
     }
   },
-  "Главная": "",
-  "О проекте": "",
-  "Это главная страница": ""
+  "Главная": "Главная",
+  "О проекте": "О проекте",
+  "Это главная страница": "Это главная страница",
+  "Язык": "Язык"
 }

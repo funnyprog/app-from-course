@@ -21,7 +21,8 @@
   "widgets": {
     "sidebar": {
       "langSwitcher": {
-        "lang": "English"
+        "lang": "English",
+        "shortLang": "EN"
       }
     }
   }

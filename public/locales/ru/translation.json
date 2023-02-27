@@ -21,9 +21,9 @@
   "widgets": {
     "sidebar": {
       "langSwitcher": {
-        "lang": "Русский"
-      },
-      "collapsedButton": "Переключить"
+        "lang": "Русский",
+        "shortLang": "RU"
+      }
     }
   }
 }
