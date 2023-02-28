@@ -54,7 +54,7 @@ export const Sidebar = (props: SidebarProps) => {
                 >
                     <HouseIcon className={cls.icon} />
                     <span className={cls.linkText}>
-                        {t('pages.routes.main')}
+                        {t('widgets.sidebar.routes.main')}
                     </span>
                 </AppLink>
                 <AppLink
@@ -64,7 +64,7 @@ export const Sidebar = (props: SidebarProps) => {
                 >
                     <InfoIcon className={cls.icon} />
                     <span className={cls.linkText}>
-                        {t('pages.routes.about')}
+                        {t('widgets.sidebar.routes.about')}
                     </span>
                 </AppLink>
             </div>

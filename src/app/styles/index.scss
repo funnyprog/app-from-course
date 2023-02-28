@@ -4,10 +4,13 @@
 @import "./variables/global";
 @import "./variables/fonts";
 
-.app {
+body {
     font: var(--font-M);
     background: var(--bg-color);
     color: var(--primary);
+}
+
+.app {
     min-height: 100vh;
 }
 

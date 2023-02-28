@@ -1,10 +1,5 @@
 {
   "pages": {
-    "routes": {
-      "main": "Главная",
-      "about": "О сайте",
-      "notFound": ""
-    },
     "MainPage": {
       "text": "Это главная страница"
     },
@@ -20,10 +15,25 @@
   },
   "widgets": {
     "sidebar": {
+      "routes": {
+        "main": "Главная",
+        "about": "О сайте",
+        "notFound": ""
+      },
       "langSwitcher": {
         "lang": "Русский",
         "shortLang": "RU"
       }
+    },
+    "navbar": {
+      "auth": {
+        "text": "Войти"
+      }
+    }
+  },
+  "shared": {
+    "modal": {
+      "text": "Modal text lorem ipsum some basic text just need"
     }
   }
 }

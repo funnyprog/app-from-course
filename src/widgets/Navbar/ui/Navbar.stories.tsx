@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StyleDecorator } from 'shared/config/storybook';
+import { ThemeDecorator } from 'shared/config/storybook';
 import { ThemeEnum } from 'shared/enums';
 import { Navbar } from './Navbar';
 
@@ -18,4 +18,4 @@ Light.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [StyleDecorator(ThemeEnum.DARK)];
+Dark.decorators = [ThemeDecorator(ThemeEnum.DARK)];

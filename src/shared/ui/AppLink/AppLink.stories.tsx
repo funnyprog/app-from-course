@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { AppLinkThemesEnum, ThemeEnum } from 'shared/enums';
-import { StyleDecorator } from 'shared/config/storybook';
+import { ThemeDecorator } from 'shared/config/storybook';
 import { AppLink } from './AppLink';
 
 export default {
@@ -45,4 +45,4 @@ DangerDark.args = {
     children: 'AppLink',
     theme: AppLinkThemesEnum.DANGER,
 };
-DangerDark.decorators = [StyleDecorator(ThemeEnum.DARK)];
+DangerDark.decorators = [ThemeDecorator(ThemeEnum.DARK)];

@@ -1,7 +1,8 @@
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
-import { AppLink } from 'shared/ui';
-import { AppLinkThemesEnum, RoutePathsEnum } from 'shared/enums';
+import { Button, Modal } from 'shared/ui';
+import { ButtonThemesEnum } from 'shared/enums';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -12,24 +13,27 @@ export const Navbar = (props: NavbarProps) => {
     const { className } = props;
     const { t } = useTranslation();
 
+    const [isOpenAuthModal, setIsOpenAuthModal] = useState(false);
+
+    const handleOpenAuthModal = useCallback(() => {
+        setIsOpenAuthModal(!isOpenAuthModal);
+    }, [isOpenAuthModal]);
+
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={cls.navbarLinks}>
-                <AppLink
-                    to={RoutePathsEnum.MAIN}
-                    className={cls.navbarBtn}
-                    theme={AppLinkThemesEnum.PRIMARY}
-                >
-                    {t('pages.routes.main')}
-                </AppLink>
-                <AppLink
-                    to={RoutePathsEnum.ABOUT}
-                    className={cls.navbarBtn}
-                    theme={AppLinkThemesEnum.DANGER}
-                >
-                    {t('pages.routes.about')}
-                </AppLink>
-            </div>
+            <Button
+                className={cls.navbarLinks}
+                theme={ButtonThemesEnum.CLEAR}
+                onClick={handleOpenAuthModal}
+            >
+                {t('widgets.navbar.auth.text')}
+            </Button>
+            <Modal
+                isOpen={isOpenAuthModal}
+                onClose={handleOpenAuthModal}
+            >
+                {t('shared.modal.text')}
+            </Modal>
         </div>
     );
 };

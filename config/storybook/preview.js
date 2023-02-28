@@ -1,5 +1,5 @@
 import { addDecorator } from '@storybook/react';
-import { StyleDecorator, RouterDecorator } from 'shared/config/storybook';
+import { StyleDecorator, RouterDecorator, ThemeDecorator } from 'shared/config/storybook';
 import { ThemeEnum } from 'shared/enums';
 import i18n from './i18next.js';
 
@@ -19,5 +19,6 @@ export const parameters = {
     },
 };
 
-addDecorator(StyleDecorator(ThemeEnum.LIGHT));
+addDecorator(StyleDecorator);
+addDecorator(ThemeDecorator(ThemeEnum.LIGHT));
 addDecorator(RouterDecorator);

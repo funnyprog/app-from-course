@@ -1,12 +1,7 @@
 {
   "pages": {
-    "routes": {
-      "main": "Main",
-      "about": "About us",
-      "notFound": ""
-    },
     "MainPage": {
-
+      "text": "Main page"
     },
     "ErrorPage": {
       "text": "Some error. Try to reload page",
@@ -20,9 +15,19 @@
   },
   "widgets": {
     "sidebar": {
+      "routes": {
+        "main": "Main",
+        "about": "About us",
+        "notFound": ""
+      },
       "langSwitcher": {
         "lang": "English",
         "shortLang": "EN"
+      }
+    },
+    "navbar": {
+      "auth": {
+        "text": "Login"
       }
     }
   }

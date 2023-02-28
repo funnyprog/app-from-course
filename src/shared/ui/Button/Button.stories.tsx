@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ButtonSizeEnum, ButtonThemesEnum, ThemeEnum } from 'shared/enums';
-import { StyleDecorator } from 'shared/config/storybook';
+import { ThemeDecorator } from 'shared/config/storybook';
 import { Button } from './Button';
 
 export default {
@@ -49,7 +49,7 @@ OutlineDark.args = {
     children: 'Button',
     theme: ButtonThemesEnum.OUTLINE,
 };
-OutlineDark.decorators = [StyleDecorator(ThemeEnum.DARK)];
+OutlineDark.decorators = [ThemeDecorator(ThemeEnum.DARK)];
 
 export const Background = Template.bind({});
 Background.args = {

@@ -1,5 +1,10 @@
 :root {
+    // fonts
+
     --font-family-main: roboto regular, "Arial", sans-serif;
+
+    // font sizes
+
     --font-size-M: 16px;
     --font-line-M: 24px;
     --font-M: var(--font-size-M) / var(--font-line-M) var(--font-family-main);
@@ -9,7 +14,13 @@
     --font-size-XL: 32px;
     --font-line-XL: 40px;
     --font-XL: var(--font-size-XL) / var(--font-line-XL) var(--font-family-main);
+
+    // fixed sizes of elements
+
     --navbar-height: 75px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
+
+    // z-index
+    --modal-z-index: 10;
 }
