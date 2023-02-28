@@ -7,7 +7,7 @@ const MainPage = () => {
 
     return (
         <div className={classNames(cls.mainPage, {}, [])}>
-            {t('Это главная страница')}
+            {t('pages.MainPage.text')}
         </div>
     );
 };

@@ -12,7 +12,9 @@ export const NotFoundPage = (props: NotFoundPageProps) => {
 
     return (
         <div className={classNames(cls.notFoundPage, {}, [className])}>
-            {t('pages.NotFoundPage.text')}
+            <span>
+                {t('pages.NotFoundPage.text')}
+            </span>
         </div>
     );
 };

@@ -1,12 +1,15 @@
 import { addDecorator } from '@storybook/react';
-import {
-    StyleDecorator,
-    RouterDecorator,
-    I18nDecorator,
-} from 'shared/config/storybook';
+import { StyleDecorator, RouterDecorator } from 'shared/config/storybook';
 import { ThemeEnum } from 'shared/enums';
+import i18n from './i18next.js';
 
 export const parameters = {
+    i18n,
+    locale: 'ru',
+    locales: {
+        ru: 'Русский',
+        en: 'English',
+    },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
         matchers: {
@@ -16,21 +19,5 @@ export const parameters = {
     },
 };
 
-export const globalTypes = {
-    locale: {
-        name: 'Locale',
-        description: 'Internationalization locale',
-        toolbar: {
-            icon: 'globe',
-            items: [
-                { value: 'en', title: 'English' },
-                { value: 'ru', title: 'Русский' },
-            ],
-            showName: true,
-        },
-    },
-};
-
 addDecorator(StyleDecorator(ThemeEnum.LIGHT));
 addDecorator(RouterDecorator);
-addDecorator(I18nDecorator);

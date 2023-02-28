@@ -20,14 +20,14 @@ export const Navbar = (props: NavbarProps) => {
                     className={cls.navbarBtn}
                     theme={AppLinkThemesEnum.PRIMARY}
                 >
-                    {t('Главная')}
+                    {t('pages.routes.main')}
                 </AppLink>
                 <AppLink
                     to={RoutePathsEnum.ABOUT}
                     className={cls.navbarBtn}
                     theme={AppLinkThemesEnum.DANGER}
                 >
-                    {t('О проекте')}
+                    {t('pages.routes.about')}
                 </AppLink>
             </div>
         </div>
