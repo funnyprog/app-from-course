@@ -1,7 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { LoginModal } from 'features/AuthByUsername';
 import { classNames } from 'shared/lib';
-import { Button, Modal } from 'shared/ui';
+import { Button } from 'shared/ui';
 import { ButtonThemesEnum } from 'shared/enums';
 import cls from './Navbar.module.scss';
 
@@ -28,12 +29,10 @@ export const Navbar = (props: NavbarProps) => {
             >
                 {t('widgets.navbar.auth.text')}
             </Button>
-            <Modal
+            <LoginModal
                 isOpen={isOpenAuthModal}
                 onClose={handleOpenAuthModal}
-            >
-                {t('shared.modal.text')}
-            </Modal>
+            />
         </div>
     );
 };

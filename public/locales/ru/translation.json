@@ -31,6 +31,21 @@
       }
     }
   },
+  "features": {
+    "AuthByUsername": {
+      "LoginForm": {
+        "firstInput": {
+          "text": "Ваш никнейм"
+        },
+        "secondInput": {
+          "text": "Ваш пароль"
+        },
+        "button": {
+          "text": "Войти"
+        }
+      }
+    }
+  },
   "shared": {
     "modal": {
       "text": "Modal text lorem ipsum some basic text just need"

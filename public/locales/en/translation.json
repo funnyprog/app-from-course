@@ -27,7 +27,22 @@
     },
     "navbar": {
       "auth": {
-        "text": "Login"
+        "text": "Sign in"
+      }
+    }
+  },
+  "features": {
+    "AuthByUsername": {
+      "LoginForm": {
+        "firstInput": {
+          "text": "Username"
+        },
+        "secondInput": {
+          "text": "Password"
+        },
+        "button": {
+          "text": "Sign in"
+        }
       }
     }
   }

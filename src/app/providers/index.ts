@@ -5,4 +5,6 @@ export * from './AppRoutesProvider/ui/AppRoutesProvider';
 
 export * from './ThemeProvider/ui/ThemeProvider';
 
+export * from './StoreProvider/ui/StoreProvider';
+
 export { ErrorBoundary };
