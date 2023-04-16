@@ -28,6 +28,9 @@
     "navbar": {
       "auth": {
         "text": "Sign in"
+      },
+      "logout": {
+        "text": "Log out"
       }
     }
   },

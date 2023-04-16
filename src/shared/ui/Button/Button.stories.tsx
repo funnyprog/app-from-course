@@ -107,3 +107,18 @@ SizeXL.args = {
     theme: ButtonThemesEnum.BACKGROUND_INVERTED,
     size: ButtonSizeEnum.XL,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'Disabled Button',
+    theme: ButtonThemesEnum.BACKGROUND_INVERTED,
+    disabled: true,
+};
+
+export const WithLoader = Template.bind({});
+WithLoader.args = {
+    children: 'Button with loader for action',
+    theme: ButtonThemesEnum.BACKGROUND_INVERTED,
+    disabled: true,
+    withLoader: true,
+};

@@ -27,6 +27,21 @@
     }
 }
 
+.disabled {
+    opacity: 0.8;
+}
+
+.withLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        margin-right: 5px;
+        animation: loader-spin 1s infinite steps(8);
+    }
+}
+
 // Button themes
 
 .clear {
@@ -66,4 +81,14 @@
 
 .sizeXL {
     font-size: var(--font-size-XL);
+}
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }
