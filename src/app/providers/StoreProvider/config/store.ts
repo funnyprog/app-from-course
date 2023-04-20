@@ -3,11 +3,15 @@ import { userReducer } from 'entities/user';
 import { createReducerManager } from './reducerManager';
 import { ReduxStoreWithManager, StoreScheme } from '../types/StoreScheme';
 
-const rootReducer: ReducersMapObject<StoreScheme> = {
-    user: userReducer,
-};
+export const configureReduxStore = (
+    initialState?: StoreScheme,
+    asyncReducers?: ReducersMapObject<StoreScheme>,
+) => {
+    const rootReducer: ReducersMapObject<StoreScheme> = {
+        ...asyncReducers,
+        user: userReducer,
+    };
 
-export const configureReduxStore = (initialState?: StoreScheme) => {
     const reducerManager = createReducerManager(rootReducer);
 
     const store = configureStore<StoreScheme>({
