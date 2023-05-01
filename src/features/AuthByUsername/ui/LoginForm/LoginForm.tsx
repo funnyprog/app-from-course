@@ -3,14 +3,18 @@ import { useTranslation } from 'react-i18next';
 import { Button, Input } from 'shared/ui';
 import { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-    getLoginFormIsLoading,
-    getLoginFormPassword,
-    getLoginFormUsername,
-} from '../../model/selectors/loginFormSelectors';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginFormActions, loginFormReducer } from '../../model/slice/loginFormSlice';
 import cls from './LoginForm.module.scss';
+import {
+    getLoginFormUsername,
+} from '../../model/selectors/getLoginFormUsername/getLoginFormUsername';
+import {
+    getLoginFormPassword,
+} from '../../model/selectors/getLoginFormPassword/getLoginFormPassword';
+import {
+    getLoginFormIsLoading,
+} from '../../model/selectors/getLoginFormIsLoading/getLoginFormIsLoading';
 
 const reducers: ReducerList = {
     loginForm: loginFormReducer,
