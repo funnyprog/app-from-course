@@ -4,8 +4,9 @@ import { LoginModal } from 'features/AuthByUsername';
 import { classNames } from 'shared/lib';
 import { Button } from 'shared/ui';
 import { ButtonThemesEnum } from 'shared/enums';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/user';
+import { useAppDispatch } from 'shared/hooks';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -15,7 +16,7 @@ interface NavbarProps {
 export const Navbar = (props: NavbarProps) => {
     const { className } = props;
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const authData = useSelector(getUserAuthData);
 
     const [isOpenAuthModal, setIsOpenAuthModal] = useState(false);

@@ -3,6 +3,7 @@ import { LoginFormScheme } from 'features/AuthByUsername';
 import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { configureReduxStore } from 'app/providers/StoreProvider/config/store';
 
 export interface StoreScheme {
     user: UserScheme
@@ -20,6 +21,8 @@ export interface ReducerManager {
     remove: (key: StoreSchemeKeys) => void
 }
 
-export interface ReduxStoreWithManager extends EnhancedStore {
+export interface ReduxStoreWithManager extends EnhancedStore<StoreScheme> {
     reducerManager: ReducerManager
 }
+
+export type AppDispatch = ReturnType<typeof configureReduxStore>['dispatch']

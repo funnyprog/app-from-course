@@ -29,7 +29,6 @@ UserLogged.decorators = [
             authData: {
                 id: 1,
                 username: 'user',
-                password: '123',
             },
         },
     }),

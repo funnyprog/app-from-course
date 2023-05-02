@@ -1,7 +1,7 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { userReducer } from 'entities/user';
 import { createReducerManager } from './reducerManager';
-import { ReduxStoreWithManager, StoreScheme } from '../types/StoreScheme';
+import { StoreScheme } from '../types/StoreScheme';
 
 export const configureReduxStore = (
     initialState?: StoreScheme,
@@ -18,8 +18,9 @@ export const configureReduxStore = (
         reducer: reducerManager.reduce,
         devTools: __IS_DEV__,
         preloadedState: initialState,
-    }) as ReduxStoreWithManager;
+    });
 
+    // @ts-ignore
     store.reducerManager = reducerManager;
 
     return store;

@@ -7,7 +7,6 @@ import React, {
 } from 'react';
 import { classNames } from 'shared/lib';
 import { Portal } from 'shared/ui';
-import CrossIcon from 'shared/assets/icons/Cross.svg';
 import cls from './Modal.module.scss';
 
 const enum ModalEnum {

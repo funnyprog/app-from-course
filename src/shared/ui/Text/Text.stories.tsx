@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { TextEnum, ThemeEnum } from 'shared/enums';
+import { ThemeEnum } from 'shared/enums';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { Text } from './Text';
 

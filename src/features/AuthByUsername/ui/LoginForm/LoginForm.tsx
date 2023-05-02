@@ -2,7 +2,8 @@ import { classNames, DynamicModuleLoader, ReducerList } from 'shared/lib';
 import { useTranslation } from 'react-i18next';
 import { Button, Input } from 'shared/ui';
 import { memo, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'shared/hooks';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginFormActions, loginFormReducer } from '../../model/slice/loginFormSlice';
 import cls from './LoginForm.module.scss';
@@ -22,12 +23,17 @@ const reducers: ReducerList = {
 
 interface LoginFormProps {
     className?: string
+    onSuccessLogin?: () => void
 }
 
 const LoginForm = memo((props: LoginFormProps) => {
-    const { className } = props;
+    const {
+        className,
+        onSuccessLogin,
+    } = props;
+
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const username = useSelector(getLoginFormUsername);
     const password = useSelector(getLoginFormPassword);
     const isLoading = useSelector(getLoginFormIsLoading);
@@ -40,9 +46,12 @@ const LoginForm = memo((props: LoginFormProps) => {
         dispatch(loginFormActions.setPassword(value));
     }, [dispatch]);
 
-    const handleLogin = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, password, username]);
+    const handleLogin = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccessLogin();
+        }
+    }, [dispatch, password, username, onSuccessLogin]);
 
     return (
         <DynamicModuleLoader
