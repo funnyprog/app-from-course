@@ -18,6 +18,7 @@
       "routes": {
         "main": "Main",
         "about": "About us",
+        "profile": "Profile",
         "notFound": ""
       },
       "langSwitcher": {

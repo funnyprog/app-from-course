@@ -18,6 +18,7 @@
       "routes": {
         "main": "Главная",
         "about": "О сайте",
+        "profile": "Профиль",
         "notFound": ""
       },
       "langSwitcher": {

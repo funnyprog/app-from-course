@@ -19,25 +19,6 @@
     flex-direction: column;
 }
 
-.link {
-    display: flex;
-    align-items: center;
-
-    &:not(:first-child) {
-        margin-top: 10px;
-    }
-}
-
-.linkText {
-    opacity: 1;
-    transition: opacity 0.4s;
-}
-
-.icon {
-    fill: var(--bg-color);
-    margin-right: 15px;
-}
-
 .switchers {
     position: absolute;
     left: 0;
@@ -61,20 +42,5 @@
         button {
             margin-left: 0;
         }
-    }
-
-    .link {
-        justify-content: center;
-        align-items: normal;
-    }
-
-    .linkText {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-
-    .icon {
-        margin-right: 0;
     }
 }

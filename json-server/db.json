@@ -8,12 +8,26 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" },
+  "profile": {
+    "firstname": "Teddy",
+    "lastname": "Brown",
+    "age": 25,
+    "currency": "RUB",
+    "country": "Россия",
+    "city": "Калининград",
+    "username": "admin",
+    "avatar": "https://img.freepik.com/premium-vector/avatar-of-a-man-with-beard-office-worker-wearing-glasses-it-developer-or-engineer-programmer_277909-144.jpg?w=2000"
+  },
   "users": [
     {
       "id": 1,
       "username": "user",
       "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "123456"
     }
   ]
 }
