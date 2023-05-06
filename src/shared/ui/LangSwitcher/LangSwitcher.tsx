@@ -2,13 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
 import { Button } from 'shared/ui';
 import { ButtonThemesEnum } from 'shared/enums';
+import { memo } from 'react';
 
 interface LangSwitcherProps {
     className?: string
     short: boolean
 }
 
-export const LangSwitcher = (props: LangSwitcherProps) => {
+export const LangSwitcher = memo((props: LangSwitcherProps) => {
     const { className, short } = props;
     const { t, i18n } = useTranslation();
 
@@ -26,4 +27,4 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
                 : 'widgets.sidebar.langSwitcher.lang')}
         </Button>
     );
-};
+});

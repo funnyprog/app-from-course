@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 import { classNames } from 'shared/lib';
 import { AppLinkThemesEnum } from 'shared/enums';
@@ -8,7 +8,7 @@ interface AppLinkProps extends LinkProps {
     theme?: AppLinkThemesEnum
 }
 
-export const AppLink: FC<AppLinkProps> = (props: AppLinkProps) => {
+export const AppLink: FC<AppLinkProps> = memo((props: AppLinkProps) => {
     const {
         children,
         className,
@@ -24,4 +24,4 @@ export const AppLink: FC<AppLinkProps> = (props: AppLinkProps) => {
             {children}
         </Link>
     );
-};
+});

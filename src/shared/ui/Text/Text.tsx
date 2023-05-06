@@ -1,4 +1,5 @@
 import { classNames } from 'shared/lib';
+import { memo } from 'react';
 import cls from './Text.module.scss';
 
 interface TextProps {
@@ -7,7 +8,7 @@ interface TextProps {
     text?: string
 }
 
-export const Text = (props: TextProps) => {
+export const Text = memo((props: TextProps) => {
     const { className, title, text } = props;
 
     return (
@@ -24,4 +25,4 @@ export const Text = (props: TextProps) => {
             )}
         </div>
     );
-};
+});

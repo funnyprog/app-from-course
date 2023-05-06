@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { Button, LangSwitcher, ThemeSwitcher } from 'shared/ui';
 import { ButtonSizeEnum, ButtonThemesEnum, LocalStorageKeysEnum } from 'shared/enums';
 import { SidebarLink } from '../SidebarLink/SidebarLink';
@@ -13,7 +13,7 @@ interface SidebarProps {
     className?: string
 }
 
-export const Sidebar = (props: SidebarProps) => {
+export const Sidebar = memo((props: SidebarProps) => {
     const { className } = props;
     const [collapsed, setCollapsed] = useState(defaultCollapsed);
 
@@ -55,4 +55,4 @@ export const Sidebar = (props: SidebarProps) => {
             </div>
         </div>
     );
-};
+});

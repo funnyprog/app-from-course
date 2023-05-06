@@ -2,6 +2,7 @@ import { AppLinkThemesEnum } from 'shared/enums';
 import { AppLink } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
+import { memo } from 'react';
 import cls from './SidebarLink.module.scss';
 import { SidebarLinkType } from '../../model/links';
 
@@ -10,7 +11,7 @@ interface SidebarLinkProps {
     collapsed: boolean
 }
 
-export const SidebarLink = (props: SidebarLinkProps) => {
+export const SidebarLink = memo((props: SidebarLinkProps) => {
     const { item, collapsed } = props;
     const { t } = useTranslation();
 
@@ -26,4 +27,4 @@ export const SidebarLink = (props: SidebarLinkProps) => {
             </span>
         </AppLink>
     );
-};
+});
