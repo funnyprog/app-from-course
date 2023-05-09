@@ -10,10 +10,13 @@ export interface BuildPaths {
 export interface BuildEnv {
     mode: BuildMode
     port: number
+    api: string
 }
+
 export interface BuildWebpackOptions {
     mode: BuildMode
     paths: BuildPaths
     isDev: boolean
     port: number
+    api: string
 }

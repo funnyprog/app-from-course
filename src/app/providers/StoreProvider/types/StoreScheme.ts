@@ -5,6 +5,9 @@ import {
 } from '@reduxjs/toolkit';
 import { configureReduxStore } from 'app/providers/StoreProvider/config/store';
 import { ProfileScheme } from 'entities/profile';
+import { AxiosInstance } from 'axios';
+import { To } from 'react-router-dom';
+import { NavigateOptions } from 'react-router';
 
 export interface StoreScheme {
     user: UserScheme
@@ -28,3 +31,8 @@ export interface ReduxStoreWithManager extends EnhancedStore<StoreScheme> {
 }
 
 export type AppDispatch = ReturnType<typeof configureReduxStore>['dispatch']
+
+export interface ThunkApiExtraArgs {
+    api: AxiosInstance
+    navigate: (to: To, options?: NavigateOptions) => void
+}
