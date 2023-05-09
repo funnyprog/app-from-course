@@ -4,9 +4,11 @@ import { StoreProvider, StoreScheme } from 'app/providers';
 import { DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
 import { loginFormReducer } from 'features/AuthByUsername';
 import { ReducerList } from 'shared/lib';
+import { profileReducer } from 'entities/profile';
 
 const defaultAsyncReducers: ReducerList = {
     loginForm: loginFormReducer,
+    profile: profileReducer,
 };
 
 export const StoreDecorator = (

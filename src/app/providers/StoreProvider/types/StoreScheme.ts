@@ -4,12 +4,14 @@ import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { configureReduxStore } from 'app/providers/StoreProvider/config/store';
+import { ProfileScheme } from 'entities/profile';
 
 export interface StoreScheme {
     user: UserScheme
 
     // async reducers
     loginForm?: LoginFormScheme
+    profile?: ProfileScheme
 }
 
 export type StoreSchemeKeys = keyof StoreScheme
