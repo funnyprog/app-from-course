@@ -23,7 +23,7 @@ describe(NAME, () => {
         expect(getLoginFormIsLoading(state as StoreScheme)).toEqual(false);
     });
 
-    test('should return false', () => {
+    test('should return true', () => {
         const state: DeepPartial<StoreScheme> = {
             loginForm: {
                 isLoading: true,

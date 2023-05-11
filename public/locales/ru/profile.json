@@ -1,5 +1,12 @@
 {
   "ProfilePage": {
-    "text": "PROFILE PAGE"
+    "card": {
+      "header": {
+        "text": "Карточка профиля",
+        "button": {
+          "text": "Редактировать"
+        }
+      }
+    }
   }
 }

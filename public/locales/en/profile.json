@@ -1,5 +1,12 @@
 {
   "ProfilePage": {
-    "text": "PROFILE PAGE"
+    "card": {
+      "header": {
+        "text": "Profile card",
+        "button": {
+          "text": "Edit"
+        }
+      }
+    }
   }
 }
