@@ -1,15 +1,5 @@
 .profileCard {
     padding: 20px;
     border: 2px var(--inverted-bg-color) solid;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.data {
-    display: flex;
-    flex-direction: column;
+    margin-top: 30px;
 }

@@ -7,3 +7,27 @@
     font: var(--font-M);
     color: var(--secondary);
 }
+
+// text theme prop
+.error {
+    .title {
+        color: var(--red-light);
+    }
+
+    .text {
+        color: var(--red-dark);
+    }
+}
+
+// text align prop
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}

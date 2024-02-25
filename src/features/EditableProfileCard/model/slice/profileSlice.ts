@@ -1,23 +1,23 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { fetchProfileData } from 'entities/profile';
-import { ProfileScheme, Profile } from '../types/ProfileScheme';
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
+import { ProfileScheme } from '../types/ProfileScheme';
 
 const initialState: ProfileScheme = {
     isLoading: false,
     error: undefined,
     data: undefined,
-    readonly: true,
+    readonly: false,
 };
 
 const profileSlice = createSlice({
     name: 'profile',
     initialState,
     reducers: {
-        setProfileData: (state, action: PayloadAction<Profile>) => {
-
+        markReadonly: (state) => {
+            state.readonly = true;
         },
-        initAuthData: (state) => {
-
+        unmarkReadonly: (state) => {
+            state.readonly = false;
         },
     },
     extraReducers: (builder) => {

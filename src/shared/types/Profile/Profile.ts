@@ -1,4 +1,4 @@
-export interface Profile {
+export interface ProfileData {
     firstname: string,
     lastname: string,
     age: number,
@@ -7,11 +7,4 @@ export interface Profile {
     city: string,
     username: string,
     avatar: string | null
-}
-
-export interface ProfileScheme {
-    isLoading: boolean
-    data?: Profile
-    error?: string
-    readonly: boolean
 }

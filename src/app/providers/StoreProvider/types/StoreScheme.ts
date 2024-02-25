@@ -4,7 +4,7 @@ import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { configureReduxStore } from 'app/providers/StoreProvider/config/store';
-import { ProfileScheme } from 'entities/profile';
+import { ProfileScheme } from 'features/EditableProfileCard';
 import { AxiosInstance } from 'axios';
 import { To } from 'react-router-dom';
 import { NavigateOptions } from 'react-router';
